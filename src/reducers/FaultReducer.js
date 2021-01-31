@@ -12,7 +12,7 @@ const FaultReducer = (state = initialState, action) => {
         case FETCHED_FAULT_PENDING:
             return {...state, fetching: true};
         case FETCHED_FAULT_FULFILLED:
-            return {...state, movies: action.payload, fetching: false};
+            return {...state, faults: action.payload, fetching: false};
         case FETCHED_FAULT_REJECTED:
             return {...state, error: action.payload, fetching: false};
         default:
