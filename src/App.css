@@ -1,3 +1,23 @@
 .App {
     text-align: center;
+    padding: 30px 5%;
+}
+
+h2 {
+    font-size: 28px;
+    padding: 15px 0;
+}
+
+.waterLogo {
+    width: 70px;
+    float: left;
+    margin-left: 20px;
+}
+
+.refreshButton {
+    color: #f88f01;
+    margin: 25px 25px;
+    float: right;
+    font-size: 20px;
+    padding: 0 20px;
 }
