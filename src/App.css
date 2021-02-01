@@ -6,6 +6,15 @@
 h2 {
     font-size: 28px;
     padding: 15px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+    padding: 15px 20px;
 }
 
 .waterLogo {
@@ -20,4 +29,74 @@ h2 {
     float: right;
     font-size: 20px;
     padding: 0 20px;
+}
+
+.spinner {
+    padding-top: 100px;
+}
+
+.card {
+    border: #0f1123;
+    border-radius: 15px 15px 15px 0;
+    background-color: #aee1e1;
+    color: #000000;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card:hover .detail {
+    color: #dd626d;
+    transition-duration: 0.5s;
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    float: left;
+    color: #0f1123;
+}
+
+.alertIcon {
+    width: 30px;
+    float: right;
+}
+
+.regions {
+    float: left;
+}
+
+.tag {
+    margin: 5px 5px;
+    float: left;
+}
+
+.time {
+    margin-top: 5px;
+    float: left;
+}
+
+.message {
+    text-align: left;
+    text-transform: lowercase;
+    color: #0f1123;
+}
+
+.date {
+    float: right;
+    margin-right: 15px;
+    color: #0f1123;
+}
+
+.detail {
+    color: #0f1123;
+    font-size: 16px;
+    margin-left: 25px;
+    float: left;
+    transition-duration: 0.5s;
+}
+
+.ant-card-actions {
+    background-color: #aee1e1;
 }

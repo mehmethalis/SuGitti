@@ -4,7 +4,7 @@ import {FETCHED_FAULT_FULFILLED, FETCHED_FAULT_REJECTED, FETCHED_FAULT_PENDING} 
 const initialState = {
     fetching: false,
     faults: [],
-    error: {}
+    error: null
 }
 
 const FaultReducer = (state = initialState, action) => {
@@ -12,9 +12,9 @@ const FaultReducer = (state = initialState, action) => {
         case FETCHED_FAULT_PENDING:
             return {...state, fetching: true};
         case FETCHED_FAULT_FULFILLED:
-            return {...state, faults: action.payload, fetching: false};
+            return {...state, faults: action.payload, fetching: false, error: null};
         case FETCHED_FAULT_REJECTED:
-            return {...state, error: action.payload, fetching: false};
+            return {...state, error: action.payload, fetching: false,faults: null};
         default:
             return state;
     }

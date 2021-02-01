@@ -2,15 +2,17 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import {connect} from 'react-redux';
 import {fetchFaults} from './actions/FaultAction';
-import {Drawer, Button, Row, Col} from 'antd';
+import {Drawer, Button, Row, Col, Spin} from 'antd';
 import WaterLogo from './drop.svg';
+import ResponseResult from "./components/ResponseResult";
+import FaultCard from "./components/FaultCard";
 
 
 const App = (props) => {
     const {fetchFaults} = props;
-    const [visible, setvisible] = useState(false);
+    const [visible, setVisible] = useState(false);
     const [faut, setFault] = useState({name: 'halis', surname: 'çiçek'});
-    const [isLoading, setLoading] = useState(false);
+
 
     useEffect(() => {
         fetchFaults()
@@ -20,34 +22,36 @@ const App = (props) => {
 
 
     const onClose = () => {
-        setvisible(false)
+        setVisible(false)
     };
 
     const refresh = () => {
-        setLoading(true)
         fetchFaults()
-        setLoading(false)
     }
     return (
         <div className="App">
             <img src={WaterLogo} alt={'Su Logosu'} className={'waterLogo'}/>
-            <Button loading={isLoading} shape="round" className={'refreshButton'} onClick={refresh}>Yenile</Button>
+            <Button loading={props.state.FaultReducer.fetching} shape="round" className={'refreshButton'}
+                    onClick={refresh}>Yenile</Button>
             <h2>İzmir Büyükşehir Belediyesi Güncel Arıza Kaynaklı Su Kesintileri</h2>
 
             <hr/>
-            <Row align={'middle'} justify={'center'}>
-                {
+            <Row align={'middle'} justify={'center'} className={'row'}>
+                {props.state.FaultReducer.fetching && <Spin className={'spinner'} size="large"/>}
+                {props.state.FaultReducer.error ? <ResponseResult error={props.state.FaultReducer.error}/> :
                     faults.map((fault) => {
                         return (
-                            <Col xs={2} sm={4} md={8} lg={8} xl={8} key={fault.ArizaID}>
-                                <Button
-                                    onClick={() => {
-                                        setFault({name: fault.IlceAdi, surname: fault.KesintiTarihi})
-                                        setvisible(true)
-                                    }}> {fault.IlceAdi}</Button>
+                            <Col xs={24} sm={24} md={12} lg={8} xl={8} key={fault.ArizaID}>
+                                <a href={'/#'} onClick={() => {
+                                    setFault({name: fault.IlceAdi, surname: fault.KesintiTarihi})
+                                    setVisible(true)
+                                }}>
+                                    <FaultCard fault={fault}/>
+                                </a>
+
                             </Col>)
-                    })
-                }
+                    })}
+
 
             </Row>
 
