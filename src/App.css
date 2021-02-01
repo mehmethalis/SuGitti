@@ -41,7 +41,8 @@ h3 {
     background-color: #aee1e1;
     color: #000000;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -96,6 +97,14 @@ h3 {
     float: left;
     transition-duration: 0.5s;
 }
+
+.drawerTitle {
+    vertical-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0;
+}
+
 
 .ant-card-actions {
     background-color: #aee1e1;
