@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import {connect} from 'react-redux';
 import {fetchFaults} from './actions/FaultAction';
-import {Drawer, Button, Row, Col, Spin} from 'antd/lib';
+import {Drawer, Button, Row, Col, Spin} from 'antd';
 import WaterLogo from './drop.svg';
 import ResponseResult from "./components/ResponseResult";
 import FaultCard from "./components/FaultCard";

@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Tag} from 'antd/lib';
+import {Card, Tag} from 'antd';
 import Alert from '../alert.svg';
 import {FieldTimeOutlined, ToTopOutlined} from '@ant-design/icons';
 
