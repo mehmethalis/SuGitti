@@ -109,3 +109,54 @@ h3 {
 .ant-card-actions {
     background-color: #aee1e1;
 }
+
+.footer{
+    background-color: #aee1e1;
+    padding: 10px 5%;
+    text-align: center;
+}
+.github{
+    float: right;
+    color: #0f1123;
+}
+.githubIcon{
+    font-size: 20px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .waterLogo{
+        float: left;
+        width: 50px;
+        margin-top: 5px;
+    }
+    h2{
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        padding: 10px 25px 0 25px;
+        float: left;
+        border-top: solid 1px #0f1123;
+    }
+   hr{
+       display: none;
+   }
+    .refreshButton{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .row{
+        padding: 0 5px 10px 5px;
+    }
+    .App{
+        padding: 10px 5px;
+    }
+    .footer{
+        text-align: center;
+    }
+    .githubIcon{
+        font-size: 16px;
+    }
+
+}
+
