@@ -8,7 +8,8 @@ export function fetchFaults() {
     return (dispatch) => {
         dispatch({
             type: 'FETCHED_FAULT',
-            payload: axios.get('https://openapi.izmir.bel.tr/api/izsu/arizakaynaklisukesintileri').then(result => result.data)
+            payload: axios.get('https://openapi.izmir.bel.tr/api/izsu/arizakaynaklisukesintileri')
+                .then(result => result.data)
         });
     }
 }

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import {connect} from 'react-redux';
 import {fetchFaults} from './actions/FaultAction';
-import {Drawer, Button, Row, Col, Spin} from 'antd';
+import {Drawer, Button, Row, Col, Spin} from 'antd/lib';
 import WaterLogo from './drop.svg';
 import ResponseResult from "./components/ResponseResult";
 import FaultCard from "./components/FaultCard";
@@ -107,8 +107,10 @@ const App = (props) => {
                 </Drawer>
             </div>
             <footer className={'footer'}>
-                <span className={'copyright'}>©{new Date().getFullYear()} Tüm Hakları Saklıdır. | Veriler <a href={'https://acikveri.bizizmir.com/'} target={'_blank'} rel="noreferrer">Açık Veri İzmir</a> Portalına Aittir. </span>
-                <a className={'github'} href={'https://github.com/mehmethalis/SuGitti'} target={'_blank'}  rel="noreferrer"><GithubOutlined className={'githubIcon'}/> GitHub</a>
+                <span className={'copyright'}>©{new Date().getFullYear()} Tüm Hakları Saklıdır. | Veriler <a
+                    href={'https://acikveri.bizizmir.com/'} target={'_blank'} rel="noreferrer">Açık Veri İzmir</a> Portalına Aittir. </span>
+                <a className={'github'} href={'https://github.com/mehmethalis/SuGitti'} target={'_blank'}
+                   rel="noreferrer"><GithubOutlined className={'githubIcon'}/> GitHub</a>
             </footer>
         </>
     );

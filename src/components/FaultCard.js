@@ -1,9 +1,10 @@
-import {Card, Tag} from 'antd';
+import React from "react";
+import {Card, Tag} from 'antd/lib';
 import Alert from '../alert.svg';
 import {FieldTimeOutlined, ToTopOutlined} from '@ant-design/icons';
 
 const FaultCard = ({fault}) => {
-    const mahalleler = fault.Mahalleler.split(',');
+    const regions = fault.Mahalleler.split(',');
     const date = new Date(fault.GuncellemeTarihi);
     const reformatDate = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' - ' + date.getHours() + ':' + date.getMinutes();
     return (
@@ -24,7 +25,7 @@ const FaultCard = ({fault}) => {
         >
             <div className={'regions'}>
                 {
-                    mahalleler.map(mahalle => <Tag className={'tag'} key={mahalle} color="orange">{mahalle}</Tag>)
+                    regions.map(region => <Tag className={'tag'} key={region} color="orange">{region}</Tag>)
                 }
             </div>
             <div className={'time'}>

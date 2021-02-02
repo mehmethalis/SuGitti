@@ -110,27 +110,30 @@ h3 {
     background-color: #aee1e1;
 }
 
-.footer{
+.footer {
     background-color: #aee1e1;
     padding: 10px 5%;
     text-align: center;
 }
-.github{
+
+.github {
     float: right;
     color: #0f1123;
 }
-.githubIcon{
+
+.githubIcon {
     font-size: 20px;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .waterLogo{
+    .waterLogo {
         float: left;
         width: 50px;
         margin-top: 5px;
     }
-    h2{
+
+    h2 {
         font-size: 16px;
         text-align: center;
         font-weight: 600;
@@ -138,23 +141,29 @@ h3 {
         float: left;
         border-top: solid 1px #0f1123;
     }
-   hr{
-       display: none;
-   }
-    .refreshButton{
+
+    hr {
+        display: none;
+    }
+
+    .refreshButton {
         font-size: 16px;
         margin-bottom: 10px;
     }
-    .row{
+
+    .row {
         padding: 0 5px 10px 5px;
     }
-    .App{
+
+    .App {
         padding: 10px 5px;
     }
-    .footer{
+
+    .footer {
         text-align: center;
     }
-    .githubIcon{
+
+    .githubIcon {
         font-size: 16px;
     }
 
