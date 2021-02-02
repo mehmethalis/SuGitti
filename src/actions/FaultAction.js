@@ -9,7 +9,7 @@ export function fetchFaults() {
     return (dispatch) => {
         dispatch({
             type: 'FETCHED_FAULT',
-            payload: axios.get('/api/izsu/arizakaynaklisukesintileri')
+            payload: axios.get('/api/izsu/arizakaynaklisukesintileri', {headers: {'Access-Control-Allow-Origin': '*',crossdomain: true}})
                 .then(result => result.data)
         });
     }
