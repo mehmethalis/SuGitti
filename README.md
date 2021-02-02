@@ -1,5 +1,5 @@
 ## LIVE
-Deployed on Netlify:  [Live](https://sugitti.netlify.app/) 
+Deployed on Netlify:  [Live](https://sugitti.vercel.app/) 
 
 ## Available Scripts
 
