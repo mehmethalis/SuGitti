@@ -9,7 +9,7 @@ export function fetchFaults() {
     return (dispatch) => {
         dispatch({
             type: 'FETCHED_FAULT',
-            payload: axios.get('https://openapi.izmir.bel.tr/api/izsu/arizakaynaklisukesintileri',{headers: {"Access-Control-Allow-Origin": "https://su-gitti.vercel.app/"}})
+            payload: axios.get('/api/izsu/arizakaynaklisukesintileri')
                 .then(result => result.data)
         });
     }

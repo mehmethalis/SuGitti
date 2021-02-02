@@ -1,6 +1,7 @@
 {
   "name": "sugitti",
   "version": "0.1.0",
+  "proxy": "https://openapi.izmir.bel.tr",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.4.0",
