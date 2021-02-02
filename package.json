@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start -p",
-    "build": "react-scripts build",
+    "build": "set PORT=8080 &&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
